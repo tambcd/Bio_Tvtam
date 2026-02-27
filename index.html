@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Giới thiệu Trần Văn Tám</title>
+  <style>
+    body {
+      background: #18192e;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .profile-card {
+      max-width: 370px;
+      width: 100%;
+      background: #22274a;
+      border-radius: 18px;
+      box-shadow: 0 8px 32px #00021d;
+      padding: 32px 22px;
+      text-align: center;
+    }
+    .avatar-glow {
+      display: inline-block;
+      padding: 6px;
+      border-radius: 50%;
+      background: conic-gradient(
+        #00fff7,
+        #4700ff 40%,
+        #ed3fff 70%,
+        #00fff7 100%
+      );
+      box-shadow:
+        0 0 12px 2px #00fff855,
+        0 0 26px 4px #6040ff55,
+        0 0 52px 12px #ed3fff44;
+      position: relative;
+      animation: rotateRing 2.2s linear infinite;
+    }
+    @keyframes rotateRing {
+      100% { transform: rotate(360deg);}
+    }
+    .avatar {
+      width: 108px;
+      height: 108px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #17172b;
+      border: 4px solid #262645;
+      box-shadow:
+        0 0 8px #5fffffb4,
+        0 0 12px #8863f5ba;
+      position: relative;
+      z-index: 3;
+      transition: box-shadow 0.25s;
+    }
+    .profile-card:hover .avatar {
+      box-shadow:
+        0 0 16px #00fff7,
+        0 0 24px #4700ffcc;
+    }
+    .name {
+      font-size: 1.6rem;
+      color: #00fff7;
+      margin: 14px 0 4px 0;
+      letter-spacing: 1px;
+      font-weight: bold;
+      text-shadow: 0 1px 7px #4700ffa4;
+    }
+    .account {
+      font-size: 1.08rem;
+      color: #f5f5fa;
+      margin-bottom: 18px;
+      background: #1d213a;
+      border-radius: 9px;
+      display: inline-block;
+      padding: 8px 20px;
+      border: 1.5px solid #00fff7aa;
+      box-shadow: 0 0 8px #4700ff33;
+    }
+    .qr-box {
+      margin-bottom: 8px;
+    }
+    .qr-img {
+      width: 124px;
+      height: 124px;
+      border-radius: 14px;
+      border: 2px solid #00fff7;
+      box-shadow: 0 0 14px #4700ff88, 0 0 4px #ed3fff66;
+      background: #161633;
+    }
+    .qr-note {
+      font-size: 1.01rem;
+      color: #ed3fff;
+      margin-top: 9px;
+      text-shadow: 0 2px 4px #0004;
+      font-weight: 500;
+    }
+    @media (max-width: 600px) {
+      .profile-card {
+        max-width: 98vw;
+        padding: 20px 4vw;
+      }
+      .avatar-glow { padding: 3px;}
+      .avatar { width: 72px; height: 72px; }
+      .qr-img { width: 82px; height: 82px; }
+      .name { font-size: 1.13rem; }
+      .account { font-size: 0.98rem; padding: 6px 10px;}
+    }
+    @media (max-width: 400px) {
+      .profile-card { padding: 7px 1vw;}
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <div class="avatar-glow">
+      <img 
+      src="https://p16-sign-sg.tiktokcdn.com/tos-alisg-avt-0068/36dc61148f3560bbe7593970f51a5a58~tplv-tiktokx-cropcenter:1080:1080.jpeg?dr=14579&refresh_token=67c855d8&x-expires=1772330400&x-signature=CZ8Y9HNrOsf5ie6kdsb2pNdeolc%3D&t=4d5b0474&ps=13740610&shp=a5d48078&shcp=81f88b70&idc=my"
+        alt="Ảnh đại diện Trần Văn Tám"
+        class="avatar"
+      />
+    </div>
+    <div class="name">Trần Văn Tám</div>
+    <div class="account">💳 Số tài khoản: <b>4036151 - ACB</b></div>
+    <div class="qr-box">
+      <img 
+        src="./QR.jpeg"
+        alt="QR tài khoản Trần Văn Tám"
+        class="qr-img"
+      />
+      <div class="qr-note">Quét mã để chuyển khoản</div>
+    </div>
+  </div>
+</body>
+</html>
+
